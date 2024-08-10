@@ -246,54 +246,54 @@ ER-диаграммы являются важным инструментом д�
 
 1. **ROW_NUMBER()**: Присваивает уникальный номер каждой строке в пределах заданного окна.
 ``` sql
-      SELECT 
-       employee_id, 
-       ROW_NUMBER() OVER (PARTITION BY department_id ORDER BY salary DESC) AS row_num
-   FROM employees;
+SELECT 
+   employee_id, 
+   ROW_NUMBER() OVER (PARTITION BY department_id ORDER BY salary DESC) AS row_num
+FROM employees;
 ```   
 
 3. **RANK()**: Присваивает ранг каждой строке в пределах окна, при этом одинаковые значения получают одинаковый ранг, а следующий ранг пропускается.
 ``` sql
-      SELECT 
-       employee_id, 
-       RANK() OVER (PARTITION BY department_id ORDER BY salary DESC) AS rank
-   FROM employees;
+SELECT 
+   employee_id, 
+   RANK() OVER (PARTITION BY department_id ORDER BY salary DESC) AS rank
+FROM employees;
 ```  
 
 4. **DENSE_RANK()**: Похож на RANK(), но не пропускает ранги при наличии одинаковых значений.
 ``` sql
-      SELECT 
-       employee_id, 
-       DENSE_RANK() OVER (PARTITION BY department_id ORDER BY salary DESC) AS dense_rank
-   FROM employees;
+SELECT 
+   employee_id, 
+   DENSE_RANK() OVER (PARTITION BY department_id ORDER BY salary DESC) AS dense_rank
+FROM employees;
  ```  
 
 5. **SUM()**: Возвращает сумму значений в пределах окна.
 ``` sql
-      SELECT 
-       employee_id, 
-       salary, 
-       SUM(salary) OVER (PARTITION BY department_id) AS total_salary
-   FROM employees;
+SELECT 
+   employee_id, 
+   salary, 
+   SUM(salary) OVER (PARTITION BY department_id) AS total_salary
+FROM employees;
 ```   
 
 6. **AVG()**: Вычисляет среднее значение для заданного окна.
 ``` sql
-      SELECT 
-       employee_id, 
-       salary, 
-       AVG(salary) OVER (PARTITION BY department_id) AS avg_salary
-   FROM employees;
+SELECT 
+   employee_id, 
+   salary, 
+   AVG(salary) OVER (PARTITION BY department_id) AS avg_salary
+FROM employees;
 ``` 
 
 7. **LEAD() и LAG()**: Позволяют получить доступ к значениям из следующей или предыдущей строки в пределах окна.
 ``` sql
-      SELECT 
-       employee_id, 
-       salary, 
-       LAG(salary) OVER (ORDER BY employee_id) AS previous_salary,
-       LEAD(salary) OVER (ORDER BY employee_id) AS next_salary
-   FROM employees;
+SELECT 
+   employee_id, 
+   salary, 
+   LAG(salary) OVER (ORDER BY employee_id) AS previous_salary,
+   LEAD(salary) OVER (ORDER BY employee_id) AS next_salary
+FROM employees;
 ```
 
 ### Применение аналитических функций:
