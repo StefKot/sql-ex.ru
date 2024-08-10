@@ -121,6 +121,7 @@ FROM
   - customer (содержит поля customer_id, name, region)
 
 ### Схема "Снежинка"
+![image](https://github.com/user-attachments/assets/8596263e-9abd-4b64-a265-9d1cc79f23af)
 
 Описание:
 - В схеме "Снежинка" таблицы измерений нормализованы, то есть разбиты на дополнительные подтаблицы.
