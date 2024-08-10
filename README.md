@@ -308,11 +308,11 @@ FROM employees;
 
 # 7. Задачи с 1 собеседования
 * Даны 2 исходные таблицы нужно было написать результат выполнения джоинов
-![image (9)](https://github.com/user-attachments/assets/69bb383c-4b92-4965-b285-f296e741b7bb)
+![image (9)](https://github.com/user-attachments/assets/69bb383c-4b92-4965-b285-f296e741b7bb)  
 
-* Есть таблица и написать запросы к ней
-![image (7)](https://github.com/user-attachments/assets/8e616d08-ffcc-4b97-a10d-aaa34f31ec5f)
-![image (8)](https://github.com/user-attachments/assets/17748150-fad3-4aaf-b246-7de255300408)
+* Есть таблица и написать запросы к ней  
+![image (7)](https://github.com/user-attachments/assets/8e616d08-ffcc-4b97-a10d-aaa34f31ec5f)  
+![image (8)](https://github.com/user-attachments/assets/17748150-fad3-4aaf-b246-7de255300408)  
 
 * Среди 8 монет есть одна фальшивая, которая легче настоящей. За какое наименьшее количество взвешиваний на чашечных весах без гирь можно наверняка выяснить, какая монета фальшивая?
 Хватит двух взвешиваний. Положить на каждую чашу по три монеты. Если вес равный, то фальшивая среди оставшихся двух. Если вес неравный, то взвесить любые две монеты из той чаши. которая легче.
