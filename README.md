@@ -14,27 +14,27 @@ Solutions from https://sql-ex.ru/
 
 1. **Уникальные индексы**: Гарантируют уникальность значений в определенном столбце или группе столбцов.
 ``` sql   
-      CREATE UNIQUE INDEX idx_unique_email ON users(email);
+CREATE UNIQUE INDEX idx_unique_email ON users(email);
 ```   
 
 3. **Обычные индексы**: Используются для ускорения поиска по столбцам, не обязательно уникальных.
 ``` sql
-      CREATE INDEX idx_last_name ON employees(last_name);
+CREATE INDEX idx_last_name ON employees(last_name);
 ```
 
 5. **Составные индексы**: Индексы, которые включают несколько столбцов.
 ``` sql
-      CREATE INDEX idx_full_name ON employees(first_name, last_name);
+CREATE INDEX idx_full_name ON employees(first_name, last_name);
 ```
 
 7. **Полнотекстовые индексы**: Используются для ускорения поиска по текстовым полям.
 ``` sql
-      CREATE FULLTEXT INDEX idx_content ON articles(content);
+CREATE FULLTEXT INDEX idx_content ON articles(content);
 ```
 
 9. **Индексы на выражениях**: Создаются на основе выражений, а не только на столбцах.
 ``` sql
-      CREATE INDEX idx_lower_name ON users(LOWER(name));
+CREATE INDEX idx_lower_name ON users(LOWER(name));
 ```
 
 ### Примеры использования индексов
